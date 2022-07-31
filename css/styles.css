@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Vazir";
+  src: url(/font/Vazirmatn-Regular.woff2);
+}
+* {
+  font-family: Vazirmatn, sans-serif !important;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(#423f3e, #171717);
+  overflow: hidden;
+}
+.neonText {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+.header {
+  position: fixed;
+  top: 24px;
+  /* color: #fbf46f; */
+}
+.image-container {
+  position: relative;
+  /* position: static; */
+  width: 200px;
+  height: 200px;
+  transition: all 1.5s;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0deg);
+}
+.image-container span {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /*translateZ(300px)*/
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+}
+.image-container span img {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  width: 100%;
+  border: 2px solid #fbf46d;
+  /* filter: blur(1px); */
+}
+.image-container span img:hover {
+  border-radius: 15px;
+  transition: 1.5s;
+  filter: blur(0px);
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 5rem;
+  width: 80%;
+}
+.btn {
+  top: 100px;
+  background-color: slateblue;
+  color: #ededed;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.btn:hover {
+  filter: brightness(1.5);
+  box-shadow: 5px 5px #3d3c42;
+  border-radius: 5px;
+}
+#prev {
+  left: 15%;
+}
+#auto {
+  left: auto;
+  right: auto;
+}
+#next {
+  right: 15%;
+}
